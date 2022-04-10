@@ -1,5 +1,5 @@
-bread
-butter
-cheese
-milk
-yoghurt
+bread x 3
+butter x 1
+cheese x 2
+milk x 3
+yoghurt x 4
