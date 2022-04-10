@@ -1,5 +1,11 @@
 bread x 3
 butter x 2
 cheese x 2
+<<<<<<< HEAD
 milk x 3
 yoghurt x 7
+=======
+eggs x 3
+yoghurt x 4
+biscuits x 10
+>>>>>>> ea8fe27 (Modify item #4 and add item #6)
