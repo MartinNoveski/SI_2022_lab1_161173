@@ -1,0 +1,177 @@
+01. # instalirav git i kreirav profil na github
+
+02. # go promeniv imteto na glavnata granka od main vo master
+
+03. # kreirav remote repository na Github so ime SI_2022_lab1_161173, dodadov README file vo koj go navedov moeto Ime, Prezime i broj na Index (Martin Noveski 161173)
+
+04. $ git clone https://github.com/MartinNoveski/SI_2022_lab1_161173.git
+    # go kloniram repozitoriumot i potvrdiv avtentikacija preku browserot
+    $ cd SI_2022_lab1_161173
+    # so cd vlegov vo lokalniot repozitorium
+
+05. $ notepad shopping_list.txt
+    # kreirav shopping_list.txt file i dodadov 5 proizvodi
+    $ git add shopping_list.txt
+    $ git commit -m "Add 5 items to the shopping list"
+    # so git add go stavam fileot vo staging area za da mozam posle da commitnam so git commit
+
+06. $ notepad shopping_list.txt
+    # dodavam kolicina na proizvodite
+    $ git add shopping_list.txt
+    $ git commit -m "Add quantities to the items."
+    # so git add go stavam fileot vo staging area za da mozam posle da commitnam so git commit
+
+07. $ git branch branch1
+    $ git branch branch2
+    # so git branch komandata kreiram 2 branches
+
+08. $ git log
+    # dosegashnite logovi na master branch
+C:\Users\Marti\SI_2022_lab1_161173>git log
+commit 97ed55af9e619c3532ee268c1e3d861f68ef3872 (HEAD -> master, branch2, branch1)
+Author: Martin <marinmk@live.com>
+Date:   Sun Apr 10 22:51:46 2022 +0200
+
+    Add quantities to the items.
+
+commit 94e719c6628fcc1fcd57c01efb1add4398a6f27e
+Author: Martin <marinmk@live.com>
+Date:   Sun Apr 10 22:50:13 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 573f1dd179f7ae7a686ea1e63dd6a2f69f7e535d (origin/master, origin/HEAD)
+Author: MartinNoveski <63522807+MartinNoveski@users.noreply.github.com>
+Date:   Sun Apr 10 22:46:58 2022 +0200
+
+    Update README.MD
+
+commit dff7d2d0a556ac6569ce6f0ccd321e99a1a1417c
+Author: MartinNoveski <63522807+MartinNoveski@users.noreply.github.com>
+Date:   Sun Apr 10 22:46:36 2022 +0200
+
+    Initial commit
+
+09. $ git push --all origin
+    # pravam push na trite granki
+
+10. $ git checkout branch1
+    # se preflram na grankata branch1
+
+11. $ notepad shopping_list.txt
+    # so notepad komandata go otvaram fileot za da napravam promena
+    $ git add shopping_list.txt
+    $ git commit -m "Change quantity of item #5"
+    # go stavam fileot shopping_list.txt vo staging area i pravam commit
+
+12. $ git checkout master
+    # se preflram na grankata master
+
+13. $ notepad shopping_list.txt
+    # so notepad komandata go otvaram fileot za da napravam promena
+    $ git add shopping_list.txt
+    $ git commit -m "Change quantity of item #2"
+    # go stavam fileot shopping_list.txt vo staging area i pravam commit
+
+14. $ git push --all origin
+    # pravam push na site granki
+
+15. $ git checkout branch2
+    # se preflram na grankata branch2
+
+16. $ notepad shopping_list.txt
+    # so notepad komandata go otvaram fileot za da napravam promena
+    $ git add shopping_list.txt
+    $ git commit -m "Modify item #4"
+    # go stavam fileot shopping_list.txt vo staging area i pravam commit
+
+17. $ git log
+C:\Users\Marti\SI_2022_lab1_161173>git log
+commit b44b1dd585680ffe558fafd3ab64e8c3f8f5b465 (HEAD -> branch2)
+Author: Martin <marinmk@live.com>
+Date:   Sun Apr 10 22:57:14 2022 +0200
+
+    Modify item #4
+
+commit 97ed55af9e619c3532ee268c1e3d861f68ef3872 (origin/branch2)
+Author: Martin <marinmk@live.com>
+Date:   Sun Apr 10 22:51:46 2022 +0200
+
+    Add quantities to the items.
+
+commit 94e719c6628fcc1fcd57c01efb1add4398a6f27e
+Author: Martin <marinmk@live.com>
+Date:   Sun Apr 10 22:50:13 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 573f1dd179f7ae7a686ea1e63dd6a2f69f7e535d
+Author: MartinNoveski <63522807+MartinNoveski@users.noreply.github.com>
+Date:   Sun Apr 10 22:46:58 2022 +0200
+
+    Update README.MD
+
+commit dff7d2d0a556ac6569ce6f0ccd321e99a1a1417c
+Author: MartinNoveski <63522807+MartinNoveski@users.noreply.github.com>
+Date:   Sun Apr 10 22:46:36 2022 +0200
+
+    Initial commit
+
+18. $ git reset --soft HEAD~1
+    # so ovaa komanda se vrakjam na prethodniot commit za da napravam promena
+    $ notepad shopping_list.txt
+    # so notepad komandata go otvaram fileot za da napravam promena
+    $ git add shopping_list.txt
+    $ git commit -m "Modify item #4 and add item #6"
+    # go stavam fileot shopping_list.txt vo staging area i pravam commit
+
+19. $ git log
+    # dosegashnite logovi od branch2
+C:\Users\Marti\SI_2022_lab1_161173>git log
+commit ea8fe27dec1fefe8f30319b65c84857e45299cad (HEAD -> branch2)
+Author: Martin <marinmk@live.com>
+Date:   Sun Apr 10 23:00:34 2022 +0200
+
+    Modify item #4 and add item #6
+
+commit 97ed55af9e619c3532ee268c1e3d861f68ef3872 (origin/branch2)
+Author: Martin <marinmk@live.com>
+Date:   Sun Apr 10 22:51:46 2022 +0200
+
+    Add quantities to the items.
+
+commit 94e719c6628fcc1fcd57c01efb1add4398a6f27e
+Author: Martin <marinmk@live.com>
+Date:   Sun Apr 10 22:50:13 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 573f1dd179f7ae7a686ea1e63dd6a2f69f7e535d
+Author: MartinNoveski <63522807+MartinNoveski@users.noreply.github.com>
+Date:   Sun Apr 10 22:46:58 2022 +0200
+
+    Update README.MD
+
+commit dff7d2d0a556ac6569ce6f0ccd321e99a1a1417c
+Author: MartinNoveski <63522807+MartinNoveski@users.noreply.github.com>
+Date:   Sun Apr 10 22:46:36 2022 +0200
+
+    Initial commit
+
+20. $ git checkout master
+    # se preflram na grankata master
+    $ git merge branch1
+    # pravam merge na branch1 kon master
+
+21. $ git checkout branch2
+    $ git rebase master
+    $ git checkout master
+    $ git merge branch2
+    # pravam rebase na master, se javi konflikt. bidejki imase promeni napraviv git add na shopping_list fileot, git commit i moze da prodolzam da smenam branch vo master i da napravam merge.
+
+22. # go savenav text dokumentot vo lokalntion repozitorium
+    $ git add 161173.txt
+    $ git commit -m "Dokumentacija"
+
+23. # git push --all origin
+    # push na site granki vo remote repo
