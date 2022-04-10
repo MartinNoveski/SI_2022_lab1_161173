@@ -1,0 +1,5 @@
+bread
+butter
+cheese
+milk
+yoghurt
